@@ -31,6 +31,7 @@ apps:
       - home
     slots:
       - dbus-daemon
+    desktop: usr/share/applications/nl.hjdskes.gcolor3.desktop
     common-id: gcolor3
 
 parts:
@@ -42,6 +43,13 @@ parts:
       - libhandy-1-dev
       - libportal-dev
       - libportal-gtk3-dev
+    override-pull: |
+      snapcraftctl pull
+
+      # Point icon in the .desktop file to the correct location
+      sed -i.bak -e 's|Icon=nl.hjdskes.gcolor3|Icon=/usr/share/icons/hicolor/scalable/apps/nl.hjdskes.gcolor3.svg|g' data/nl.hjdskes.gcolor3.desktop.in
+      # Change application name in the .desktop file from 'Color Picker' to 'Gcolor3'
+      sed -i.bak -e 's|Name=Color Picker|Name=Gcolor3|g' data/nl.hjdskes.gcolor3.desktop.in
     organize:
       snap/gcolor3/current/usr: usr
 
