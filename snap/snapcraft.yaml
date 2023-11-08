@@ -7,21 +7,27 @@ description: |
   Ever wanted to know the value of that color on your screen? Gcolor3 enables 
   you to pick the color from any pixel on your screen. It also offers a palette, 
   so that you can easily mix and match a couple of colors together.
-  
+
   When you have found the perfect combination of colors, naturally you want to 
   save them. Gcolor3 allows you to conveniently save and retrieve colors.
-  
+
   Gcolor3 is a color selection dialog written in GTK+ 3. It is much alike Gcolor2, 
   but uses the newer GTK+ version and other modernisations to better integrate 
   into your modern desktop.
-  
-  Attribution: 
+
+  Attribution:
   Gcolor3 is written and maintained by Jens Hidskes. The summary and description
   were taken from the gcolor3 project website (https://www.hjdskes.nl/projects/gcolor3/).
-  
+
 
 grade: stable
 confinement: strict
+
+architectures:
+  - build-on: [amd64]
+    build-for: [amd64]
+  - build-on: [arm64]
+    build-for: [arm64]
 
 apps:
   gcolor3:
