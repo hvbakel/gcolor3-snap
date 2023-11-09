@@ -40,7 +40,7 @@ apps:
     plugs:
       - home
     slots:
-      - dbus-daemon
+      - dbus-gcolor3
     desktop: usr/share/applications/nl.hjdskes.gcolor3.desktop
     common-id: gcolor3
 
@@ -64,7 +64,7 @@ parts:
       snap/gcolor3/current/usr: usr
 
 slots:
-  dbus-daemon:
+  dbus-gcolor3:
     interface: dbus
     bus: session
     name: nl.hjdskes.gcolor3
