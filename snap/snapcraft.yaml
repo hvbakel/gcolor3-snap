@@ -4,6 +4,7 @@ version: '2.4.0+git'
 license: GPL-2.0+
 grade: stable
 confinement: strict
+compression: lzo
 
 summary: A color selection dialog written in GTK+ 3 by Jente Hidskens
 description: |
