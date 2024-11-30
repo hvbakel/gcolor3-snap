@@ -1,5 +1,5 @@
 name: gcolor3
-base: core22
+base: core24
 version: '2.4.0+git'
 license: GPL-2.0+
 grade: stable
@@ -26,11 +26,10 @@ description: |
   description were taken from the gcolor3 project website
   (https://www.hjdskes.nl/projects/gcolor3/).
 
-
-architectures:
-  - build-on: [amd64]
-    build-for: [amd64]
-  - build-on: [arm64]
+platforms:
+  amd64:
+  arm64:
+    build-on: [amd64, arm64]
     build-for: [arm64]
 
 apps:
